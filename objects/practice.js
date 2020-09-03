@@ -15,6 +15,8 @@
 */
 
 //Code here
+const me = { name: "Wayne", age: 23 };
+alert(me.name);
 
 ////////// PROBLEM 2 //////////
 
@@ -24,6 +26,14 @@
 */
 
 //Code here
+const favoriteThings = {
+  band: "Distant Dream",
+  food: "Steak",
+  person: "Hanna",
+  book: "Percy Jackson",
+  movie: "Parasite",
+  holiday: "New Years",
+};
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
@@ -31,6 +41,8 @@
 */
 
 //Code here
+favoriteThings.car = "Tesla Model S"
+favoriteThings.brand = "Google"
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -38,6 +50,8 @@
 */
 
 //Code here
+favoriteThings.food = "Chicken Nuggets"
+favoriteThings.book = "Harry Potter"
 
 ////////// PROBLEM 3 //////////
 
@@ -50,12 +64,17 @@
 */
 
 //Code here
+const backPack = {}
+const item = "firstPocket"
+backPack[item] = "chapstick"
+backPack.color = "Blue/Red"
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
+// alert(backPack)
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -64,17 +83,18 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+console.log(backPack)
 
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
 var user2 = {
-  name: 'Bryan',
+  name: "Bryan",
   age: 24,
-  pwHash: 'U+Ldlngx2BYQk',
-  email: 'BryanSmith33@gmail.com',
-  birthday: '05/02/1990',
-  username: 'bryansmith33'
+  pwHash: "U+Ldlngx2BYQk",
+  email: "BryanSmith33@gmail.com",
+  birthday: "05/02/1990",
+  username: "bryansmith33",
 };
 // Do not edit the code above.
 
@@ -85,6 +105,8 @@ var user2 = {
 */
 
 //Code Here
+user2.name = "Bryan G. Smith"
+user2.email = "bryan.smith@devmounta.in"
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
@@ -96,6 +118,7 @@ var user2 = {
 */
 
 //Code Here
+const methodCollection = {}
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
@@ -103,12 +126,16 @@ var user2 = {
 */
 
 //Code Here
+methodCollection.alertHello = function() { alert("hello") }
+methodCollection.logHello = function() {  console.log("hello") }
 
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
+// methodCollection.alertHello()
+// methodCollection.logHello()
 
 ////////// PROBLEM 6 //////////
 
@@ -118,6 +145,14 @@ var user2 = {
 */
 
 //Code Here
+//Solution with ES6 shorthand
+function makePerson(name, birthday, ssn) {
+  return {
+    name,
+    birthday,
+    ssn
+  }
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -127,3 +162,10 @@ var user2 = {
 */
 
 //Code Here
+function makeCard(cardNumber, expirationDate, securityCode) {
+  return {
+    cardNumber,
+    expirationDate,
+    securityCode
+  }
+}
